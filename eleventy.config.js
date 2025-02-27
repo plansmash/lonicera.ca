@@ -1,5 +1,4 @@
 import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
@@ -7,12 +6,6 @@ import pluginFilters from "./_config/filters.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
-	// Drafts, see also _data/eleventyDataSchema.js
-	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
-			return false;
-		}
-	});
 
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
@@ -28,45 +21,10 @@ export default async function(eleventyConfig) {
 	// Watch images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}");
 
-	// Per-page bundles, see https://github.com/11ty/eleventy-plugin-bundle
-	// Adds the {% css %} paired shortcode
-	eleventyConfig.addBundle("css", {
-		toFileDirectory: "dist",
-	});
-	// Adds the {% js %} paired shortcode
-	eleventyConfig.addBundle("js", {
-		toFileDirectory: "dist",
-	});
-
 	// Official plugins
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
-
-	eleventyConfig.addPlugin(feedPlugin, {
-		type: "atom", // or "rss", "json"
-		outputPath: "/feed/feed.xml",
-		stylesheet: "pretty-atom-feed.xsl",
-		templateData: {
-			eleventyNavigation: {
-				key: "Feed",
-				order: 4
-			}
-		},
-		collection: {
-			name: "posts",
-			limit: 10,
-		},
-		metadata: {
-			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
-			author: {
-				name: "Your Name"
-			}
-		}
-	});
 
 	// Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
