@@ -18,7 +18,7 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #0c0b09; /* Background color for the entire website, including individual sections */
   --default-color: rgba(255, 255, 255, 0.7); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
@@ -969,13 +969,13 @@ section,
   z-index: 3;
 }
 
-.hero h2 {
+.hero h1 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
 }
 
-.hero h2 span {
+.hero h1 span {
   color: var(--accent-color);
 }
 

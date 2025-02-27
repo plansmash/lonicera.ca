@@ -1,0 +1,27 @@
+---
+title: Welcome to Lonicera
+description: Delivering great food for more than 18 years!
+permalink: /en/
+eleventyNavigation:
+  key: "Home"
+  order: 1
+---
+
+<section id="hero" class="hero section dark-background">
+
+	<img src="../../../../assets/img/hero-bg.jpg" alt="">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start">
+				<h1>Welcome to <span>{{ metadata.companyName }}</span></h1>
+				<p>{{ description }}</p>
+				<div class="d-flex mt-4">
+					<a href="{{ locale }}/menu" class="cta-btn">Our Menu</a>
+					<a href="#book-a-table" class="cta-btn">Book a Table</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
