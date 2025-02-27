@@ -81,7 +81,6 @@ Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the
 ## Demos
 
 - [Netlify](https://eleventy-base-blog.netlify.app/)
-- [Vercel](https://demo-base-blog.11ty.dev/)
 - [Cloudflare Pages](https://eleventy-base-blog-d2a.pages.dev/)
 - [Remix on Glitch](https://glitch.com/~11ty-eleventy-base-blog)
 - [GitHub Pages](https://11ty.github.io/eleventy-base-blog/)
@@ -92,7 +91,6 @@ Deploy this Eleventy site in just a few clicks on these services:
 
 - Read more about [Deploying an Eleventy project](https://www.11ty.dev/docs/deployment/) to the web.
 - [Deploy this to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/11ty/eleventy-base-blog)
-- [Deploy this to **Vercel**](https://vercel.com/import/project?template=11ty%2Feleventy-base-blog)
 - Look in `.github/workflows/gh-pages.yml.sample` for information on [Deploying to **GitHub Pages**](https://www.11ty.dev/docs/deployment/#deploy-an-eleventy-project-to-git-hub-pages).
 - [Try it out on **Stackblitz**](https://stackblitz.com/github/11ty/eleventy-base-blog)
 
