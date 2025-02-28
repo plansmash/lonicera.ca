@@ -892,6 +892,7 @@ section,
   padding: 60px 0;
   scroll-margin-top: 77px;
   overflow: clip;
+	margin-top: 75px
 }
 
 @media (max-width: 1199px) {
@@ -1060,7 +1061,7 @@ section,
 }
 
 .about .content .fst-italic {
-  color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
+  color: color-mix(in srgb, var(--accent-color), var(--accent-color) 50%);
 }
 
 .about .content ul {
