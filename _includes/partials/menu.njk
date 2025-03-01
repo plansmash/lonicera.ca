@@ -1,0 +1,12 @@
+
+{%- for item in collections.filteredMenu -%}
+<div class="col-lg-6 menu-item isotope-item filter-starters">
+	<img src="/assets/img/menu/{{ item.data.image }}" class="menu-img" alt="{{ item.data.title }}">
+	<div class="menu-title">
+		<a href="#">{{ item.data.title }}</a><span>${{ item.data.price }}</span>
+	</div>
+	<p class="menu-description">
+		{{ item.data.description }}
+	</p>
+</div>
+{%- endfor -%}

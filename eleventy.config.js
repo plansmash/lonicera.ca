@@ -21,6 +21,10 @@ export default async function(eleventyConfig) {
 	// Watch images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}");
 
+	eleventyConfig.addCollection("filteredMenu", function (collectionApi) {
+		return collectionApi.getFilteredByTag("menu").filter(item => item.data.title !== "Menu");
+	});
+
 	// Official plugins
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
