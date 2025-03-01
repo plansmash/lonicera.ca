@@ -18,15 +18,15 @@ export default {
 	social: {
 		twitter: {
 			"url": "https://twitter.com/lonicera",
-			"font-icon": "twitter-x"
+			"font-icon": "fa-x-twitter"
 		},
 		facebook: {
 			"url": "https://www.facebook.com/lonicera",
-			"font-icon": "facebook"
+			"font-icon": "fa-facebook"
 		},
 		instagram: {
 			"url": "https://www.instagram.com/lonicera",
-			"font-icon": "instagram"
+			"font-icon": "fa-instagram"
 		}
 	}
 }
