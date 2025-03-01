@@ -911,7 +911,7 @@ section,
   position: relative;
 }
 
-.section-title h2 {
+.section-title h1 {
   font-size: 14px;
   font-weight: 500;
   padding: 0;
@@ -923,7 +923,7 @@ section,
   position: relative;
 }
 
-.section-title h2::after {
+.section-title h1::after {
   content: "";
   width: 120px;
   height: 1px;
