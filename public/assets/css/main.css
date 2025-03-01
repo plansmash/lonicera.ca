@@ -1190,6 +1190,40 @@ section,
   border: 8px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
+.menu-icons {
+	list-style: none;
+	/* Remove default bullets */
+	padding: 0;
+	margin: 8px 0 0;
+	/* Ensure spacing above */
+	display: flex;
+	/* Keeps items inline */
+	gap: 8px;
+	/* Space between badges */
+	align-items: center;
+	/* Aligns badges vertically */
+	flex-wrap: wrap;
+	/* Allows wrapping on small screens */
+}
+
+.menu-icons li {
+	display: inline;
+	/* Ensures list items behave like inline elements */
+}
+
+.menu-icons li:first-child {
+	margin-left: 15px;
+}
+
+.menu-icons .badge {
+	font-size: 0.85rem;
+	padding: 6px 10px;
+	display: inline-flex;
+	/* Keeps icon and text aligned */
+	align-items: center;
+	gap: 5px;
+}
+
 .menu .menu-title {
   margin-left: 95px;
   overflow: hidden;

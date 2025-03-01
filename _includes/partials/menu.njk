@@ -1,12 +1,28 @@
-
 {%- for item in collections.filteredMenu -%}
 <div class="col-lg-6 menu-item isotope-item filter-starters">
 	<img src="/assets/img/menu/{{ item.data.image }}" class="menu-img" alt="{{ item.data.title }}">
-	<div class="menu-title">
-		<a href="#">{{ item.data.title }}</a><span>${{ item.data.price }}</span>
-	</div>
+
+	<h2 class="menu-title">
+		<a href="#">{{ item.data.title }}</a>
+		<span>${{ item.data.price }}</span>
+	</h2>
+
 	<p class="menu-description">
 		{{ item.data.description }}
 	</p>
+
+	<!-- Dietary Icons in List -->
+	<ul class="menu-icons mt-4">
+		{%- if item.data.vegan -%}
+		<li><span class="badge bg-success"><i class="fas fa-seedling"></i> Vegan</span></li>
+		{%- endif -%}
+		{%- if item.data.glutenfree -%}
+		<li><span class="badge bg-primary"><i class="fas fa-wheat-awn"></i> Gluten-Free</span></li>
+		{%- endif -%}
+		{%- if item.data.vegetarian -%}
+		<li><span class="badge bg-warning text-dark"><i class="fas fa-carrot"></i> Vegetarian</span></li>
+		{%- endif -%}
+	</ul>
+
 </div>
 {%- endfor -%}
