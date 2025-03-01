@@ -1,0 +1,31 @@
+
+<div class="row">
+	<div class="col-lg-3">
+		<ul class="nav nav-tabs flex-column">
+			{% for special in collections.specials %}
+			<li class="nav-item">
+				<a class="nav-link {% if loop.first %}active show{% endif %}" data-bs-toggle="tab" href="#specials-tab-{{ loop.index }}">
+					{{ special.data.day }}: "{{ special.data.title }}"
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-lg-9 mt-4 mt-lg-0">
+		<div class="tab-content">
+			{% for special in collections.specials %}
+			<div class="tab-pane {% if loop.first %}active show{% endif %}" id="specials-tab-{{ loop.index }}">
+				<div class="row">
+					<div class="col-lg-8 details order-2 order-lg-1">
+						<h3>{{ special.data.dish }} – ${{ special.data.price }}</h3>
+						<p>{{ special.data.description }}</p>
+					</div>
+					<div class="col-lg-4 text-center order-1 order-lg-2">
+						<img src="/assets/img/{{ special.data.image }}" alt="{{ special.data.dish }}" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
