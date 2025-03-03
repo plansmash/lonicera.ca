@@ -1,6 +1,6 @@
 {%- for item in collections.filteredMenu -%}
 <div class="col-lg-6 menu-item isotope-item filter-starters">
-	<img src="/assets/img/menu/{{ item.data.image }}" class="menu-img" alt="{{ item.data.title }}">
+	<img src="{{ '/assets/img/menu/' | url + item.data.image }}" class="menu-img" alt="{{ item.data.title }}">
 
 	<h2 class="menu-title">
 		<a href="#">{{ item.data.title }}</a>
